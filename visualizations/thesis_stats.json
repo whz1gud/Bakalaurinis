@@ -1,0 +1,98 @@
+[
+  {
+    "name": "ViT-S Baseline",
+    "matching_mean": 0.5829825251836801,
+    "matching_std": 0.30873803882762924,
+    "non_matching_mean": 0.03817973170880165,
+    "non_matching_std": 0.11351888651393632,
+    "separation": 0.5448027934748785
+  },
+  {
+    "name": "ViT-S Contrastive",
+    "matching_mean": 0.5170528866026712,
+    "matching_std": 0.3223688728971778,
+    "non_matching_mean": 0.009300412024091402,
+    "non_matching_std": 0.10670875775993671,
+    "separation": 0.5077524745785799
+  },
+  {
+    "name": "ViT-S Triplet",
+    "matching_mean": 0.5834220727528877,
+    "matching_std": 0.3118889718630827,
+    "non_matching_mean": 0.03744780354004614,
+    "non_matching_std": 0.11215499429987846,
+    "separation": 0.5459742692128415
+  },
+  {
+    "name": "ViT-S ArcFace",
+    "matching_mean": 0.5205721016761993,
+    "matching_std": 0.3256325406898243,
+    "non_matching_mean": 0.008311502392349205,
+    "non_matching_std": 0.09901552114699379,
+    "separation": 0.51226059928385
+  },
+  {
+    "name": "ViT-S Focal",
+    "matching_mean": 0.5467235250592175,
+    "matching_std": 0.32901150668697043,
+    "non_matching_mean": 0.004529990725719241,
+    "non_matching_std": 0.11275651979115464,
+    "separation": 0.5421935343334983
+  },
+  {
+    "name": "ViT-S CLIP",
+    "matching_mean": 0.5860029745403332,
+    "matching_std": 0.31897046879957947,
+    "non_matching_mean": 0.005701758679079987,
+    "non_matching_std": 0.1057200855841496,
+    "separation": 0.5803012158612533
+  },
+  {
+    "name": "ViT-B Baseline",
+    "matching_mean": 0.5782599957283087,
+    "matching_std": 0.3295283621813589,
+    "non_matching_mean": 0.02167659728173413,
+    "non_matching_std": 0.10349658008720766,
+    "separation": 0.5565833984465746
+  },
+  {
+    "name": "ViT-B Contrastive",
+    "matching_mean": 0.5245644317003273,
+    "matching_std": 0.33279517859970553,
+    "non_matching_mean": 0.0091363737824424,
+    "non_matching_std": 0.0983210364599455,
+    "separation": 0.5154280579178849
+  },
+  {
+    "name": "ViT-B Triplet",
+    "matching_mean": 0.5775137758604295,
+    "matching_std": 0.32727380518384186,
+    "non_matching_mean": 0.021921321878382242,
+    "non_matching_std": 0.10480590339454453,
+    "separation": 0.5555924539820473
+  },
+  {
+    "name": "ViT-B ArcFace",
+    "matching_mean": 0.5579199905670996,
+    "matching_std": 0.3307885408322029,
+    "non_matching_mean": 0.0039974059617333465,
+    "non_matching_std": 0.10030001668758802,
+    "separation": 0.5539225846053663
+  },
+  {
+    "name": "ViT-B Focal",
+    "matching_mean": 0.5603796611953745,
+    "matching_std": 0.3375102132368624,
+    "non_matching_mean": 0.0043293034481782545,
+    "non_matching_std": 0.10783369597554798,
+    "separation": 0.5560503577471962
+  },
+  {
+    "name": "ViT-B CLIP",
+    "matching_mean": 0.590513384247829,
+    "matching_std": 0.3269463236811553,
+    "non_matching_mean": 0.004246989118607824,
+    "non_matching_std": 0.10047845562416707,
+    "separation": 0.5862663951292212
+  }
+]

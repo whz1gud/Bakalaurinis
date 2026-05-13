@@ -1,0 +1,94 @@
+Running ViT-B Baseline Evaluation...
+Job ID: 228186
+Node: node-38
+Sun May 10 14:59:12 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.144.03             Driver Version: 550.144.03     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla V100-SXM2-32GB           On  |   00000000:8A:00.0 Off |                    0 |
+| N/A   40C    P0             47W /  300W |       1MiB /  32768MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+
+======================================================================
+BASELINE EVALUATION - DINOv2 dinov2_vitb14 (No Fine-tuning)
+======================================================================
+
+Device: cuda
+GPU: Tesla V100-SXM2-32GB
+
+----------------------------------------------------------------------
+Step 1: Loading DINOv2 model...
+----------------------------------------------------------------------
+Loading DINOv2 backbone: dinov2_vitb14...
+Downloading: "https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_pretrain.pth" to /scratch/lustre/home/vymi9180/.cache/torch/hub/checkpoints/dinov2_vitb14_pretrain.pth
+Backbone weights frozen.
+Model created: dinov2_vitb14 -> 128D embeddings
+
+----------------------------------------------------------------------
+Step 2: Loading datasets...
+----------------------------------------------------------------------
+[load_groundtruth] Loaded 10000 query-reference pairs from data/dev_queries_groundtruth.csv
+[DISC21EvalDataset] Found 50000 images in data/queries_dev
+[DISC21EvalDataset] Found 50000 images in data/refs
+
+----------------------------------------------------------------------
+Step 3: Extracting embeddings...
+----------------------------------------------------------------------
+
+Extracting query embeddings...
+  Shape: (50000, 128)
+
+Extracting reference embeddings...
+  Shape: (50000, 128)
+
+Total extraction time: 719.2s
+
+----------------------------------------------------------------------
+Step 4: Computing metrics...
+----------------------------------------------------------------------
+Computing similarity matrix...
+  Precision@1: 0.5784
+  Precision@5: 0.6427
+  Precision@10: 0.6597
+  Precision@50: 0.7146
+  Precision@100: 0.7278
+  mAP: 0.6093
+  uAP: 0.3992
+
+----------------------------------------------------------------------
+Step 5: Saving results...
+----------------------------------------------------------------------
+Results saved to: results/baseline_vitb14_results.json
+
+======================================================================
+BASELINE RESULTS SUMMARY
+======================================================================
+
+Metric                    Score
+------------------------------
+P@1                      0.5784
+P@5                      0.6427
+P@10                     0.6597
+P@50                     0.7146
+P@100                    0.7278
+mAP                      0.6093
+uAP                      0.3992
+------------------------------
+
+[OK] Baseline evaluation complete!
+     These results represent DINOv2 performance WITHOUT fine-tuning.
+     After training with different loss functions, we'll compare against these.
+Baseline evaluation complete!

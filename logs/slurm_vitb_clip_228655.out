@@ -1,0 +1,189 @@
+Starting ViT-B + CLIP/InfoNCE Loss training...
+Job ID: 228655
+Node: node-39
+Working dir: /scratch/lustre/home/vymi9180/Kursinis
+Sun May 10 20:21:11 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.144.03             Driver Version: 550.144.03     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla V100-SXM2-32GB           On  |   00000000:8A:00.0 Off |                    0 |
+| N/A   32C    P0             38W /  300W |       1MiB /  32768MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+GPU: Tesla V100-SXM2-32GB
+
+[Setup] Loading DINOv2 model (dinov2_vitb14)...
+Loading DINOv2 backbone: dinov2_vitb14...
+Backbone weights frozen.
+Model created: dinov2_vitb14 -> 128D embeddings
+[Setup] Model ready on cuda
+[Setup] Initializing clip loss...
+[Setup] Loss function ready: clip
+[Setup] Optimizer ready: AdamW with lr=0.0001
+[Setup] Loading datasets...
+[DISC21PairDataset] Found 50000 images in data/train
+[DISC21EvalDataset] Found 50000 images in data/queries_dev
+[DISC21EvalDataset] Found 50000 images in data/refs
+[load_groundtruth] Loaded 10000 query-reference pairs from data/dev_queries_groundtruth.csv
+[Setup] Training samples: 50000
+[Setup] Validation queries: 50000
+[Setup] Validation refs: 50000
+
+======================================================================
+TRAINING: CLIP LOSS | dinov2_vitb14
+======================================================================
+Backbone: dinov2_vitb14
+Epochs: 0 -> 20
+Batch size: 256
+Learning rate: 0.0001
+Device: cuda
+Checkpoint every: 30 minutes
+======================================================================
+
+
+[Epoch 0] Loss: 0.0391 | LR: 9.94e-06 | Time: 7.1min
+[Checkpoint] Saved: clip_epoch_000_epoch.pt
+[Checkpoint] Removed old: clip_epoch_000_epoch.pt
+
+[Epoch 1] Loss: 0.0299 | LR: 9.78e-06 | Time: 6.9min
+[Checkpoint] Saved: clip_epoch_001_epoch.pt
+[Checkpoint] Removed old: clip_epoch_001_epoch.pt
+
+[Epoch 2] Loss: 0.0259 | LR: 9.51e-06 | Time: 6.9min
+[Checkpoint] Saved: clip_epoch_002_epoch.pt
+[Checkpoint] Removed old: clip_epoch_002_epoch.pt
+
+[Epoch 3] Loss: 0.0240 | LR: 9.14e-06 | Time: 7.0min
+[Checkpoint] Saved: clip_epoch_003_epoch.pt
+[Checkpoint] Removed old: clip_epoch_003_epoch.pt
+
+[Epoch 4] Loss: 0.0225 | LR: 8.68e-06 | Time: 7.0min
+[Checkpoint] Saved: clip_epoch_004_epoch.pt
+[Checkpoint] Removed old: clip_epoch_004_epoch.pt
+
+[Validation] Extracting embeddings...
+[Validation] Computing metrics...
+Computing similarity matrix...
+  Precision@1: 0.5917
+  Precision@5: 0.6616
+  Precision@10: 0.6824
+  mAP: 0.6247
+  uAP: 0.4775
+[Checkpoint] Saved: clip_epoch_004_best.pt
+[Checkpoint] New best model saved!
+[Epoch 4] Validation P@1: 0.5917 (Best: 0.5917)
+
+[Epoch 5] Loss: 0.0197 | LR: 8.15e-06 | Time: 6.9min
+[Checkpoint] Saved: clip_epoch_005_epoch.pt
+[Checkpoint] Removed old: clip_epoch_005_epoch.pt
+
+[Epoch 6] Loss: 0.0196 | LR: 7.54e-06 | Time: 6.9min
+[Checkpoint] Saved: clip_epoch_006_epoch.pt
+[Checkpoint] Removed old: clip_epoch_006_epoch.pt
+
+[Epoch 7] Loss: 0.0186 | LR: 6.89e-06 | Time: 7.0min
+[Checkpoint] Saved: clip_epoch_007_epoch.pt
+[Checkpoint] Removed old: clip_epoch_007_epoch.pt
+
+[Epoch 8] Loss: 0.0178 | LR: 6.20e-06 | Time: 7.0min
+[Checkpoint] Saved: clip_epoch_008_epoch.pt
+[Checkpoint] Removed old: clip_epoch_008_epoch.pt
+
+[Epoch 9] Loss: 0.0175 | LR: 5.50e-06 | Time: 7.0min
+[Checkpoint] Saved: clip_epoch_009_epoch.pt
+[Checkpoint] Removed old: clip_epoch_009_epoch.pt
+
+[Validation] Extracting embeddings...
+[Validation] Computing metrics...
+Computing similarity matrix...
+  Precision@1: 0.6049
+  Precision@5: 0.6654
+  Precision@10: 0.6919
+  mAP: 0.6340
+  uAP: 0.4915
+[Checkpoint] Saved: clip_epoch_009_best.pt
+[Checkpoint] New best model saved!
+[Epoch 9] Validation P@1: 0.6049 (Best: 0.6049)
+
+[Epoch 10] Loss: 0.0169 | LR: 4.80e-06 | Time: 6.9min
+[Checkpoint] Saved: clip_epoch_010_epoch.pt
+[Checkpoint] Removed old: clip_epoch_010_epoch.pt
+
+[Epoch 11] Loss: 0.0171 | LR: 4.11e-06 | Time: 6.9min
+[Checkpoint] Saved: clip_epoch_011_epoch.pt
+[Checkpoint] Removed old: clip_epoch_011_epoch.pt
+
+[Epoch 12] Loss: 0.0163 | LR: 3.46e-06 | Time: 6.9min
+[Checkpoint] Saved: clip_epoch_012_epoch.pt
+[Checkpoint] Removed old: clip_epoch_012_epoch.pt
+
+[Epoch 13] Loss: 0.0161 | LR: 2.85e-06 | Time: 6.8min
+[Checkpoint] Saved: clip_epoch_013_epoch.pt
+[Checkpoint] Removed old: clip_epoch_013_epoch.pt
+
+[Epoch 14] Loss: 0.0158 | LR: 2.32e-06 | Time: 6.6min
+[Checkpoint] Saved: clip_epoch_014_epoch.pt
+[Checkpoint] Removed old: clip_epoch_014_epoch.pt
+
+[Validation] Extracting embeddings...
+[Validation] Computing metrics...
+Computing similarity matrix...
+  Precision@1: 0.6106
+  Precision@5: 0.6730
+  Precision@10: 0.6919
+  mAP: 0.6371
+  uAP: 0.4968
+[Checkpoint] Saved: clip_epoch_014_best.pt
+[Checkpoint] New best model saved!
+[Epoch 14] Validation P@1: 0.6106 (Best: 0.6106)
+
+[Epoch 15] Loss: 0.0156 | LR: 1.86e-06 | Time: 6.7min
+[Checkpoint] Saved: clip_epoch_015_epoch.pt
+[Checkpoint] Removed old: clip_epoch_015_epoch.pt
+
+[Epoch 16] Loss: 0.0159 | LR: 1.49e-06 | Time: 6.6min
+[Checkpoint] Saved: clip_epoch_016_epoch.pt
+[Checkpoint] Removed old: clip_epoch_016_epoch.pt
+
+[Epoch 17] Loss: 0.0153 | LR: 1.22e-06 | Time: 7.1min
+[Checkpoint] Saved: clip_epoch_017_epoch.pt
+
+[Epoch 18] Loss: 0.0152 | LR: 1.06e-06 | Time: 6.9min
+[Checkpoint] Saved: clip_epoch_018_epoch.pt
+
+[Epoch 19] Loss: 0.0150 | LR: 1.00e-06 | Time: 7.0min
+[Checkpoint] Saved: clip_epoch_019_epoch.pt
+
+[Validation] Extracting embeddings...
+[Validation] Computing metrics...
+Computing similarity matrix...
+  Precision@1: 0.6163
+  Precision@5: 0.6730
+  Precision@10: 0.6919
+  mAP: 0.6411
+  uAP: 0.4977
+[Checkpoint] Saved: clip_epoch_019_best.pt
+[Checkpoint] New best model saved!
+[Epoch 19] Validation P@1: 0.6163 (Best: 0.6163)
+
+======================================================================
+TRAINING COMPLETE
+======================================================================
+Total time: 2.78 hours
+Best P@1: 0.6163
+Best checkpoint: checkpoints/clip_best.pt
+======================================================================
+Training history saved to: logs/clip_history.json
+Training complete!

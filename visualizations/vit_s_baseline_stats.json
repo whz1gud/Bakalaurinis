@@ -1,0 +1,13 @@
+{
+  "name": "ViT-S Baseline",
+  "checkpoint": null,
+  "backbone": "dinov2_vits14",
+  "n_queries": 2029,
+  "n_refs": 2029,
+  "n_match_pairs": 529,
+  "matching_similarity_mean": 0.582281242182834,
+  "matching_similarity_std": 0.3132247027034434,
+  "non_matching_similarity_mean": 0.032960596406702056,
+  "non_matching_similarity_std": 0.1150872913922872,
+  "separation": 0.5493206457761319
+}

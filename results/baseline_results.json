@@ -1,0 +1,22 @@
+{
+  "experiment": "baseline",
+  "model": "dinov2_vits14",
+  "embedding_dim": 128,
+  "fine_tuned": false,
+  "queries_dir": "data/queries_dev",
+  "refs_dir": "data/refs",
+  "num_queries": 50000,
+  "num_refs": 50000,
+  "num_groundtruth": 10000,
+  "extraction_time_seconds": 359.88367438316345,
+  "timestamp": "2025-12-30T00:11:12.494243",
+  "metrics": {
+    "P@1": 0.5671077504725898,
+    "P@5": 0.6124763705103969,
+    "P@10": 0.6294896030245747,
+    "P@50": 0.6824196597353497,
+    "P@100": 0.7069943289224953,
+    "mAP": 0.5879696046292818,
+    "uAP": 0.41437940577174515
+  }
+}

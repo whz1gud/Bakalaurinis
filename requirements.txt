@@ -1,0 +1,33 @@
+# Deep Learning
+torch>=2.0.0
+torchvision>=0.15.0
+
+# DINOv2 (loaded via torch.hub, no separate install needed)
+# Alternative: transformers for HuggingFace version
+transformers>=4.30.0
+
+# Metric Learning
+pytorch-metric-learning>=2.3.0
+
+# Data Processing
+numpy>=1.24.0
+pandas>=2.0.0
+pillow>=10.0.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Progress bars
+tqdm>=4.65.0
+
+# Jupyter
+jupyter>=1.0.0
+ipykernel>=6.25.0
+
+# Image augmentation (same library used by DISC21 creators)
+# augly>=1.0.0  # Optional - Meta's augmentation library
+
+# Similarity search (optional, for efficient nearest neighbor)
+faiss-cpu>=1.7.0  # Use faiss-gpu if you have CUDA
+

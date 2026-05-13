@@ -1,0 +1,13 @@
+{
+  "name": "ViT-S CLIP",
+  "checkpoint": "checkpoints/clip_best.pt",
+  "backbone": "dinov2_vits14",
+  "n_queries": 2029,
+  "n_refs": 2029,
+  "n_match_pairs": 529,
+  "matching_similarity_mean": 0.5860029745403332,
+  "matching_similarity_std": 0.31897046879957947,
+  "non_matching_similarity_mean": 0.005701758679079987,
+  "non_matching_similarity_std": 0.1057200855841496,
+  "separation": 0.5803012158612533
+}
