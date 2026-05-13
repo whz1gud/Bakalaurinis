@@ -1,0 +1,231 @@
+% Bibliography for Image Similarity Coursework
+% Using the citation format from coursework requirements: [AutMmR]
+
+% ============================================================================
+% CORE PAPERS (Must cite)
+% ============================================================================
+
+% DISC21 Dataset Paper - The dataset we use
+@inproceedings{Dou21,
+    author = {Matthijs Douze and Giorgos Tolias and Ed Pizzi and Zoë Papakipos and 
+              Lowik Chanussot and Filip Radenovic and Tomas Jenicek and Maxim Maximov and 
+              Laura Leal-Taixé and Ismail Elezi and Ondřej Chum and Cristian Canton Ferrer},
+    title = {The 2021 Image Similarity Dataset and Challenge},
+    booktitle = {Proceedings of the Neural Information Processing Systems Track on Datasets and Benchmarks},
+    year = {2021},
+    url = {https://github.com/facebookresearch/isc2021},
+    langid = {english},
+}
+
+% DINOv2 - The backbone model we use
+@misc{Oqu24,
+    author = {Maxime Oquab and Timothée Darcet and Théo Moutakanni and Huy Vo and 
+              Marc Szafraniec and Vasil Khalidov and Pierre Fernandez and Daniel Haziza and 
+              Francisco Massa and Alaaeldin El-Nouby and Mahmoud Assran and Nicolas Ballas and 
+              Wojciech Galuba and Russell Howes and Po-Yao Huang and Shang-Wen Li and 
+              Ishan Misra and Michael Rabbat and Vasu Sharma and Gabriel Synnaeve and 
+              Hu Xu and Hervé Jegou and Julien Mairal and Patrick Labatut and 
+              Armand Joulin and Piotr Bojanowski},
+    title = {DINOv2: Learning Robust Visual Features without Supervision},
+    year = {2024},
+    eprint = {2304.07193},
+    archivePrefix = {arXiv},
+    primaryClass = {cs.CV},
+    url = {https://arxiv.org/abs/2304.07193},
+    langid = {english},
+}
+
+% ArcFace Loss - One of our loss functions (best performer)
+@article{Den22,
+    author = {Jiankang Deng and Jia Guo and Jing Yang and Niannan Xue and 
+              Irene Kotsia and Stefanos Zafeiriou},
+    title = {ArcFace: Additive Angular Margin Loss for Deep Face Recognition},
+    journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+    volume = {44},
+    number = {10},
+    pages = {5962--5979},
+    year = {2022},
+    publisher = {IEEE},
+    doi = {10.1109/TPAMI.2021.3087709},
+    langid = {english},
+}
+
+% Large Margin Nearest Neighbor - Early triplet-based metric learning
+@inproceedings{Wei06,
+    author = {Kilian Q. Weinberger and John Blitzer and Lawrence K. Saul},
+    title = {Distance Metric Learning for Large Margin Nearest Neighbor Classification},
+    booktitle = {Advances in Neural Information Processing Systems (NIPS)},
+    year = {2006},
+    pages = {1473--1480},
+    langid = {english},
+}
+
+% FaceNet / Triplet Loss - One of our loss functions (popularized triplet loss)
+@inproceedings{Sch15,
+    author = {Florian Schroff and Dmitry Kalenichenko and James Philbin},
+    title = {FaceNet: A Unified Embedding for Face Recognition and Clustering},
+    booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year = {2015},
+    pages = {815--823},
+    doi = {10.1109/CVPR.2015.7298682},
+    langid = {english},
+}
+
+% Vision Transformer (ViT) - Architecture DINOv2 is based on
+@inproceedings{Dos21,
+    author = {Alexey Dosovitskiy and Lucas Beyer and Alexander Kolesnikov and 
+              Dirk Weissenborn and Xiaohua Zhai and Thomas Unterthiner and 
+              Mostafa Dehghani and Matthias Minderer and Georg Heigold and 
+              Sylvain Gelly and Jakob Uszkoreit and Neil Houlsby},
+    title = {An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale},
+    booktitle = {International Conference on Learning Representations (ICLR)},
+    year = {2021},
+    url = {https://arxiv.org/abs/2010.11929},
+    langid = {english},
+}
+
+% ============================================================================
+% SUPPLEMENTARY PAPERS (Useful for theory section)
+% ============================================================================
+
+% Original DINO - Self-supervised learning predecessor
+@inproceedings{Car21,
+    author = {Mathilde Caron and Hugo Touvron and Ishan Misra and Hervé Jégou and 
+              Julien Mairal and Piotr Bojanowski and Armand Joulin},
+    title = {Emerging Properties in Self-Supervised Vision Transformers},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    year = {2021},
+    pages = {9650--9660},
+    langid = {english},
+}
+
+% Original Contrastive Loss - Hadsell et al. 2006
+@inproceedings{Had06,
+    author = {Raia Hadsell and Sumit Chopra and Yann LeCun},
+    title = {Dimensionality Reduction by Learning an Invariant Mapping},
+    booktitle = {Proceedings of the IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year = {2006},
+    volume = {2},
+    pages = {1735--1742},
+    doi = {10.1109/CVPR.2006.100},
+    langid = {english},
+}
+
+% Contrastive Learning / SimCLR (modern application)
+@inproceedings{Che20,
+    author = {Ting Chen and Simon Kornblith and Mohammad Norouzi and Geoffrey Hinton},
+    title = {A Simple Framework for Contrastive Learning of Visual Representations},
+    booktitle = {Proceedings of the 37th International Conference on Machine Learning (ICML)},
+    year = {2020},
+    pages = {1597--1607},
+    langid = {english},
+}
+
+% Deep Metric Learning Survey
+@article{Kay19,
+    author = {Mahmut Kaya and Hasan Şakir Bilge},
+    title = {Deep Metric Learning: A Survey},
+    journal = {Symmetry},
+    volume = {11},
+    number = {9},
+    pages = {1066},
+    year = {2019},
+    doi = {10.3390/sym11091066},
+    langid = {english},
+}
+
+% PyTorch Metric Learning Library (we used this)
+@misc{Mus20,
+    author = {Kevin Musgrave and Serge Belongie and Ser-Nam Lim},
+    title = {PyTorch Metric Learning},
+    year = {2020},
+    url = {https://github.com/KevinMusgrave/pytorch-metric-learning},
+    langid = {english},
+}
+
+% Attention mechanism / Transformers original paper
+@inproceedings{Vas17,
+    author = {Ashish Vaswani and Noam Shazeer and Niki Parmar and Jakob Uszkoreit and 
+              Llion Jones and Aidan N. Gomez and Łukasz Kaiser and Illia Polosukhin},
+    title = {Attention Is All You Need},
+    booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+    year = {2017},
+    pages = {5998--6008},
+    langid = {english},
+}
+
+% GitHub Repository - Code implementation
+@misc{GitHub2025,
+    author = {Vytautas Mielkus},
+    title = {Image Similarity Methods Comparison - Coursework Implementation},
+    year = {2025},
+    url = {https://github.com/whz1gud/Kursinis},
+    langid = {english},
+}
+
+% ============================================================================
+% NEW LOSS FUNCTION PAPERS
+% ============================================================================
+
+% Focal Loss - RetinaNet, origin of Focal Loss in object detection
+@inproceedings{Lin17,
+    author = {Tsung-Yi Lin and Priya Goyal and Ross Girshick and Kaiming He and Piotr Dollár},
+    title = {Focal Loss for Dense Object Detection},
+    booktitle = {Proceedings of the IEEE International Conference on Computer Vision (ICCV)},
+    year = {2017},
+    pages = {2980--2988},
+    doi = {10.1109/ICCV.2017.324},
+    langid = {english},
+}
+
+% CLIP - Contrastive Language-Image Pre-training (InfoNCE applied at scale)
+@inproceedings{Rad21,
+    author = {Alec Radford and Jong Wook Kim and Chris Hallacy and Aditya Ramesh and
+              Gabriel Goh and Sandhini Agarwal and Girish Sastry and Amanda Askell and
+              Pamela Mishkin and Jack Clark and Gretchen Krueger and Ilya Sutskever},
+    title = {Learning Transferable Visual Models From Natural Language Supervision},
+    booktitle = {Proceedings of the 38th International Conference on Machine Learning (ICML)},
+    year = {2021},
+    pages = {8748--8763},
+    langid = {english},
+}
+
+% InfoNCE - Contrastive Predictive Coding (origin of InfoNCE loss)
+@misc{Oor18,
+    author = {Aaron van den Oord and Yazhe Li and Oriol Vinyals},
+    title = {Representation Learning with Contrastive Predictive Coding},
+    year = {2018},
+    eprint = {1807.03748},
+    archivePrefix = {arXiv},
+    primaryClass = {cs.LG},
+    url = {https://arxiv.org/abs/1807.03748},
+    langid = {english},
+}
+
+% ============================================================================
+% EMBEDDING VISUALIZATION PAPERS
+% ============================================================================
+
+% t-SNE - Visualizing Data using t-SNE
+@article{van08,
+    author = {Laurens van der Maaten and Geoffrey Hinton},
+    title = {Visualizing Data using t-{SNE}},
+    journal = {Journal of Machine Learning Research},
+    volume = {9},
+    pages = {2579--2605},
+    year = {2008},
+    url = {https://jmlr.org/papers/v9/vandermaaten08a.html},
+    langid = {english},
+}
+
+% UMAP - Uniform Manifold Approximation and Projection
+@misc{McI18,
+    author = {Leland McInnes and John Healy and James Melville},
+    title = {{UMAP}: Uniform Manifold Approximation and Projection for Dimension Reduction},
+    year = {2018},
+    eprint = {1802.03426},
+    archivePrefix = {arXiv},
+    primaryClass = {stat.ML},
+    url = {https://arxiv.org/abs/1802.03426},
+    langid = {english},
+}
